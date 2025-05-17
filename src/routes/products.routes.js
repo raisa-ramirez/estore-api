@@ -1,14 +1,13 @@
 import { Router } from 'express'
 import { getProducts, getProduct, createProduct, updateProduct, deleteProduct } from '../controllers/products.controllers.js'
+const productsRouter = Router()
 
-const router = Router()
-
-router.get('/products', getProducts)
-router.get('/products/:id', getProduct)
-router.post('/products', createProduct)
-router.put('/products/:id', updateProduct)
-router.delete('/products/:id', deleteProduct)
+productsRouter.get('/products', getProducts)
+productsRouter.get('/products/:id', getProduct)
+productsRouter.post('/products', createProduct)
+productsRouter.put('/products/:id', updateProduct)
+productsRouter.delete('/products/:id', deleteProduct)
 
 export {
-    router
+    productsRouter
 }
